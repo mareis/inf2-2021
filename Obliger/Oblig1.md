@@ -2,11 +2,11 @@
 
 ## Oppgave 1
 
-a) Skriv et program som skriver "Programmering er veldig "kult"!" til konsoll. Legg merke til at de doble fnuttene (anførselstegn) i teksten også skal skrives ut.
+ a) Skriv et program som skriver "Programmering er veldig "kult"!" til konsoll. Legg merke til at de doble fnuttene (anførselstegn) i teksten også skal skrives ut.
 
-b) Hvilke(n) funksjon(er) har kommentarer i programkode?
+ b) Hvilke(n) funksjon(er) har kommentarer i programkode?
 
-c) Hva er feil med koden i "Kodebit 1" under? Rett den opp så den kjører.
+ c) Hva er feil med koden i "Kodebit 1" under? Rett den opp så den kjører.
 
 d) Skriv adressen ut på følgende to måter ved å bruke variabler: "Adressen er Kongens gate 432b" og "Gaten er Kongens Gate, husnummeret er 432, oppgang b"
 
@@ -74,7 +74,7 @@ Skriv et program som printer ut en liste med justert mengde av ingrediensene for
 
 ## Oppgave 6
 
-Arealet av en sylinder har <a href="https://www.matematikk.org/artikkel.html?tid=154998&within_tid=154319">formel</a> 2*arealSirkel + omkretsSirkel*h.
+Arealet av en sylinder har <a href="https://www.matematikk.org/artikkel.html?tid=154998&within_tid=154319">formel</a>: 2$\cdot$arealSirkel + omkretsSirkel$\cdot$h.
 
 Oppgave: Lag et program bruke variabler for pi, radius, høyde og sirkelens omkrets og areal, slik at programmet unngår å gjøre på nytt beregninger som allerede er gjort før.
 
