@@ -74,7 +74,7 @@ Skriv et program som printer ut en liste med justert mengde av ingrediensene for
 
 ## Oppgave 6
 
-Arealet av en sylinder har <a href="https://www.matematikk.org/artikkel.html?tid=154998&within_tid=154319">formel</a>: 2$\cdot$arealSirkel + omkretsSirkel$\cdot$h.
+Arealet av en sylinder har <a href="https://www.matematikk.org/artikkel.html?tid=154998&within_tid=154319">formel</a>: 2*arealSirkel + omkretsSirkel*h.
 
 Oppgave: Lag et program bruke variabler for pi, radius, høyde og sirkelens omkrets og areal, slik at programmet unngår å gjøre på nytt beregninger som allerede er gjort før.
 
