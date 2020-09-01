@@ -1,7 +1,7 @@
 # Oblig 1: Utskrift, variabler, datatyper og pseudokode
 
 ## Oppgave 1
-
+---
  a) Skriv et program som skriver "Programmering er veldig "kult"!" til konsoll. Legg merke til at de doble fnuttene (anførselstegn) i teksten også skal skrives ut.
 
  b) Hvilke(n) funksjon(er) har kommentarer i programkode?
@@ -20,6 +20,7 @@ console.log(adresse)
 ```
 
 ## Oppgave 2
+---
 
 a) Lagre tallet 1000 som heltall i en variabel
 
@@ -28,6 +29,7 @@ b) Bruk heltallsdivisjon, og del tallet fra a) på 23
 c) Ta resultatet fra b) og gang det med 23 igjen. Hvorfor blir ikke svaret 1000? Forklar hvorfor heltallsdivisjon kan være nyttig.
 
 ## Oppgave 3
+---
 
 Med utgangspunkt i programmet "Økning av antallet blomster pr uke i et bed" under:
 
@@ -47,6 +49,7 @@ antall blomster om en uke = antall blomster i bedet + (antall blomster i bedet *
 ```
 
 ## Oppgave 4
+---
 
 Du er på restaurant med andre studenter på faget fra din kommune, og på regningen er følgende informasjon:
 
@@ -61,6 +64,7 @@ b) Lag en ny variabel som regner ut total pris på middagen, og skriv ut denne
 c) Regn ut pris per person for et valgfritt antall personer, og skriv ut pris per person og antallet personer til konsoll
 
 ## Oppgave 5
+---
 
 Listen under er ingrediensene for å lage småkaker. Denne oppskriften gir 36 småkaker.
 
@@ -73,6 +77,7 @@ Listen under er ingrediensene for å lage småkaker. Denne oppskriften gir 36 sm
 Skriv et program som printer ut en liste med justert mengde av ingrediensene for 10 småkaker.
 
 ## Oppgave 6
+---
 
 Arealet av en sylinder har <a href="https://www.matematikk.org/artikkel.html?tid=154998&within_tid=154319">formel</a>: 2 ganger arealSirkel + omkretsSirkel ganger h.
 
