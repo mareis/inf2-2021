@@ -2,7 +2,8 @@
 
 **Variabler**
 
-## 1.1 
+## 1.1
+
 ---
 
 Hva er feil eller dårlig med variabelnavnene under? Gi en kort forklaring og gi dem til bedre variabelnavn.
@@ -19,22 +20,25 @@ e) %AvTallet = 15
 
 f) SummenAvRegnestykketEr = 16
 
-
 **Datatyper**
 
 ## 2.1
-___
+
+---
+
 Skriv et program som skriver "5 ganger 10 er 50" ved å bruke variabler for tallene 5, 10 og 50.
 
-## 2.2 
-___
-Skriv et program som bruker variablene under (erstatt variabelnavnene med mer passende navn) til å skrive forslag til e-post adresser til konsoll. 
+## 2.2
+
+---
+
+Skriv et program som bruker variablene under (erstatt variabelnavnene med mer passende navn) til å skrive forslag til e-post adresser til konsoll.
 
 Kriterier:
 
-- Epostadressene skal bestå av fornavn og etternavn, separert med punktum, etterfulgt av @ og et valgfritt domene, for eksempel "test.testesen@bedrift.no". 
+- Epostadressene skal bestå av fornavn og etternavn, separert med punktum, etterfulgt av @ og et valgfritt domene, for eksempel "test.testesen@bedrift.no".
 
-- Epostadressene som skrives ut skal være uten mellomrom. 
+- Epostadressene som skrives ut skal være uten mellomrom.
 
 - Variabelen som inneholder "domene" skal ikke inneholde "@".
 
@@ -46,10 +50,12 @@ let var2 = etternavn
 let var3 = domene
 ```
 
-## 2.3 
-___
+## 2.3
+
+---
 
 a) Hvorfor blir ikke regnestykket under regnet ut når print-setningen kjøres?
+
 ```JavaScript
 console.log("4 + 6")
 ```
@@ -67,10 +73,12 @@ console.log(parsInt(total))
 ```
 
 **Sammensatte datatyper**
-## 3.1
-___
 
-Skriv et program som lager romkoder i en kontorbygning ved å bruke informasjonen under. Romkoden er satt sammen slik: (etasjenummer)(romtype-forkortelse)(romnummer), for eksempel 03K03, som betyr etasje nr 3, K for Kontor og 03 for kontor nr 3. 
+## 3.1
+
+---
+
+Skriv et program som lager romkoder i en kontorbygning ved å bruke informasjonen under. Romkoden er satt sammen slik: (etasjenummer)(romtype-forkortelse)(romnummer), for eksempel 03K03, som betyr etasje nr 3, K for Kontor og 03 for kontor nr 3.
 
 Mulige verdier i variablene:
 
@@ -81,8 +89,3 @@ Romtype: Kontor, møterom, lager, samtalerom
 Romnummer: 1-25
 
 Skriv ut tre eksempler på romnummer, kalt rom1, rom2 og rom3 ved å lage tre variabler som har verdier fra listen over.
-
-
-```python
-
-```
