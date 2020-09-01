@@ -69,7 +69,7 @@ let a = 3.4
 let b = 20.5
 total = a * b
 console.log(total)
-console.log(parsInt(total))
+console.log(parseInt(total))
 ```
 
 **Sammensatte datatyper**
