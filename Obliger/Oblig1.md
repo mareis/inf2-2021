@@ -1,4 +1,4 @@
-# Oblig 1:  Utskrift, variabler, datatyper og pseudokode
+# Oblig 1: Utskrift, variabler, datatyper og pseudokode
 
 ## Oppgave 1
 
@@ -33,19 +33,18 @@ Med utgangspunkt i programmet "Økning av antallet blomster pr uke i et bed" und
 
 a) Skriv pseudokode for programmet
 
-b) Erstatt variabelnavnene i programmet med beskrivende, gyldige variabelnavn 
+b) Erstatt variabelnavnene i programmet med beskrivende, gyldige variabelnavn
 
 c) Endre tilordningen av variablene slik at programmet fungerer
 
 d) Skriv antall blomster etter 10 uker til konsoll med en forklarende setning
 
-
-````JavaScript
-'150' = antall blomster i bedet 
+```JavaScript
+'150' = antall blomster i bedet
 15 % økning pr uke = 0.15
 
 antall blomster om en uke = antall blomster i bedet + (antall blomster i bedet * 15 % økning pr uke)
-````
+```
 
 ## Oppgave 4
 
@@ -61,8 +60,7 @@ b) Lag en ny variabel som regner ut total pris på middagen, og skriv ut denne
 
 c) Regn ut pris per person for et valgfritt antall personer, og skriv ut pris per person og antallet personer til konsoll
 
-
-## Oppgave 5 
+## Oppgave 5
 
 Listen under er ingrediensene for å lage småkaker. Denne oppskriften gir 36 småkaker.
 
@@ -72,13 +70,12 @@ Listen under er ingrediensene for å lage småkaker. Denne oppskriften gir 36 sm
 - 4 egg
 - 1 ts bakepulver
 
-
 Skriv et program som printer ut en liste med justert mengde av ingrediensene for 10 småkaker.
 
 ## Oppgave 6
 
-Nedenfor står et program hvor vi regner ut omkrets og areal for en sirkel etter de velkjente formlene O = 2πr og A = πr2. Slik programmet er nå brukes ingen variabler. Dette gjør at når vi skal regne ut arealet av en sylinder hvor sirkelen er grunnflate, må vi gjøre om igjen flere beregninger som vi allerede har gjort tidligere.
+Arealet av en sylinder har <a href="https://www.matematikk.org/artikkel.html?tid=154998&within_tid=154319">formel</a> 2*arealSirkel + omkretsSirkel*h.
 
-Tips: Arealet av sylinderen med høyde h vil være Omkrets_sirkel * h +  2 * Areal_sirkel, hvor det første leddet er arealet av sylinderveggen og det siste leddet er topp- og bunnlokket.
+Oppgave: Lag et program bruke variabler for pi, radius, høyde og sirkelens omkrets og areal, slik at programmet unngår å gjøre på nytt beregninger som allerede er gjort før.
 
-Oppgave: Endre koden ved å tilordne og deretter bruke variabler for pi, radius, høyde og sirkelens omkrets og areal, slik at programmet unngår å gjøre på nytt beregninger som allerede er gjort før.
+Radiusen til grunnflaten er 5.4 m og høyden til sylinderen er 7.9 m.
