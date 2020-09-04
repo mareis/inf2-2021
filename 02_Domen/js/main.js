@@ -1,12 +1,10 @@
-//console.log(document.body);
-//console.log(document.querySelector("h1"));
-//console.log(document.querySelector("#main-header"));
-//console.log(document.querySelector(".test-text"));
+document.title = "Domen";
+document.body.style = "background:red";
 
-let mainHeader = document.querySelector("#main-header");
+document.querySelector("h1").innerHTML += " -- Hei fra JavaScript!";
 
-//console.log(mainHeader);
-//mainHeader.innerHTML = "Hei fra JavaScript";
+//lurt med variabel
+const mainHeader = document.querySelector("#main-header");
 
-mainHeader.innerHTML += "--- Hei fra JavaScript";
-mainHeader.style = "color:red";
+mainHeader.innerHTML += "!!";
+mainHeader.style = "color:blue";
