@@ -68,16 +68,18 @@ Fullfør koden under (fjern prikkene og skriv koden som mangler) for å få den 
 let aaa = Math.floor(Math.random()*10) + 1;
 let bbb = Math.floor(Math.random()*10) + 1;
 
-if ......:
-    print("A er større enn B")
-
-else if......:
-    print("A er ikke lik B")
-else if......:
-    print("B er større enn A")
-else
-    print('A er lik B')
-
+if (......) {
+    oppgave2_4.innerHTML = `A = (${aaa}) er større enn B = (${bbb})`;
+}
+else if (......) {
+    oppgave2_4.innerHTML = `A = (${aaa}) er ikke lik B = (${bbb}`;
+}
+else if (......) {
+    oppgave2_4.innerHTML = `B = (${bbb} er større enn A = (${aaa})`;
+}
+else { = (${aaa})
+    oppgave2_4.innerHTML = `A = (${aaa}) er lik B = (${bbb}`;
+}
 ```
 
 # 3.1
