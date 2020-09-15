@@ -1,12 +1,10 @@
 window.addEventListener("keydown", (e) => {
-  console.log(e);
-  farge = "";
   if (e.code === "Space") {
+    let fargekode = "#";
     for (let i = 0; i < 6; i++) {
-      let verdi = Math.floor(Math.random() * 10);
-      farge += verdi;
+      fargekode += Math.floor(Math.random() * 10);
     }
-    document.querySelector("#hoved").style.backgroundColor = `#${farge}`;
-    document.querySelector("#boks").innerHTML = `#${farge}`;
+    document.querySelector("#hoved").style.backgroundColor = fargekode;
+    document.querySelector("#boks").innerHTML = fargekode;
   }
 });
