@@ -12,12 +12,25 @@
       let sangtekstE = document.querySelector("#sangtekst");
       for (let n = 0; n < 99; n++) {
         ant -= 1;
-        sangtekstE.innerHTML += `
+        if (ant === 2) {
+          sangtekstE.innerHTML += `
+        <p>
+            ${ant} flasker med brus på hylla, ${ant} flasker med brus.<br>
+            Ta en ned og send den rundt, ${ant - 1} flaske med brus på hylla.
+        </p>`;
+        } else if (ant === 1) {
+          sangtekstE.innerHTML += `
+        <p>
+            ${ant} flaske med brus på hylla, ${ant} flaske med brus.<br>
+            Ta en ned og send den rundt, ingen flasker med brus på hylla.
+        </p>`;
+        } else {
+          sangtekstE.innerHTML += `
         <p>
             ${ant} flasker med brus på hylla, ${ant} flasker med brus.<br>
             Ta en ned og send den rundt, ${ant - 1} flasker med brus på hylla.
-        </p>
-        `;
+        </p>`;
+        }
       }
     </script>
   </body>
