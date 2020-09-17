@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div id="sangtekst"></div>
+  </head>
+  <body>
+    <script>
+      let ant = 100;
+      let sangtekstE = document.querySelector("#sangtekst");
+      for (let n = 0; n < 99; n++) {
+        ant -= 1;
+        sangtekstE.innerHTML += `
+        <p>
+            ${ant} flasker med brus på hylla, ${ant} flasker med brus.<br>
+            Ta en ned og send den rundt, ${ant - 1} flasker med brus på hylla.
+        </p>
+        `;
+      }
+    </script>
+  </body>
+</html>
