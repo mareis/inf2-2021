@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 5px;
+        margin-top: 10px;
+      }
+      .box {
+        height: 80px;
+        background-color: #17181c;
+        display: grid;
+        place-items: center;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="knapp" type="button" value="Legg til én" />
+    <input id="knapp" type="button" value="Legg til 10" />
+    <input id="knapp" type="button" value="Fjern alle" />
+
+    <div id="grid"></div>
+    <script>
+      const gridE = document.querySelector("#grid");
+      const knappE = document.querySelector("#knapp");
+
+      knappE.addEventListener("click", (e) => {
+        gridE.innerHTML += `<div class="box">🔥</div>`;
+      });
+    </script>
+  </body>
+</html>
