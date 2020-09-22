@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="nr3"></p>
+    <p id="nr4">Nr 4</p>
+    <p id="nr5">Nr 5 <br /><br />1, 1,</p>
+
+    <script>
+      //Nr 3 Lag en løkke som skriver ut oddetallene fra 0 til 20
+      document.querySelector("#nr3").innerHTML += `Nr 3 <br><br>`;
+      for (let tall = 1; tall <= 20; tall += 2) {
+        document.querySelector("#nr3").innerHTML += `${tall}, `;
+      }
+      document.querySelector("#nr3").innerHTML += `<br><br>`;
+
+      for (let tall = 0; tall <= 20; tall++) {
+        if (tall % 2 != 0) {
+          document.querySelector("#nr3").innerHTML += `${tall}, `;
+        }
+      }
+      document.querySelector("#nr3").innerHTML += `<br><br>`;
+
+      for (let tall = 0; tall <= 20; tall++) {
+        if (tall % 2 === 0) {
+          continue;
+        } else {
+          document.querySelector("#nr3").innerHTML += `${tall}, `;
+        }
+      }
+
+      //Nr 4 Lag en løkke som regner ut summen av alle oddetall fra 0 til 20
+      let sum = 0;
+      for (let tall = 0; tall <= 20; tall++) {
+        if (tall % 2 != 0) {
+          sum = sum + tall;
+          document.querySelector("#nr4").innerHTML += `<br><br>${sum}`;
+        }
+      }
+      document.querySelector("#nr4").innerHTML += `<br><br>${sum}`;
+
+      //Nr 5 Lag en løkke som skriver ut 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 (Her trenger du tok minst 2 variabler. Neste tall er lik summen av de to fåregående)
+      a = 1;
+      b = 1;
+      for (let i = 0; i < 20; i++) {
+        c = a + b;
+        document.querySelector("#nr5").innerHTML += ` ${c}, `;
+        a = b;
+        b = c;
+      }
+
+      //Nr 6
+      for (let i = 1; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+          console.log(`${i}*${j} = ${i * j}`);
+        }
+      }
+    </script>
+  </body>
+</html>

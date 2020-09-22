@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro</title>
+  </head>
+  <body>
+    <h1>Innput og knapper</h1>
+    <input id="knapp" type="button" value="Trykk på meg" />
+    <p id="utskrift"></p>
+    <input type="text" name="" id="tekst" />
+    <p id="utskrift2"></p>
+    <script>
+      const knappE = document.querySelector("#knapp");
+      const utskriftE = document.querySelector("#utskrift");
+
+      knappE.addEventListener("click", (e) => {
+        utskriftE.innerHTML = "Du klikket på meg.";
+      });
+    </script>
+  </body>
+</html>
