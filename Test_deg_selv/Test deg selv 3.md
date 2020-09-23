@@ -114,6 +114,9 @@ body {
 - Lag en ny knapp øverst som legger til 10 nye `<div class="box">🔥</div>` når man trykker på den. Du må bruke en for-løkke.
 - Lag en ny knapp som fjerner alle `<div class="box">🔥</div>`.
 
-## 3.1 Fotball
+## 3.2 Fotball
 
 ---
+
+I denne oppgavene skal du presentere 3 fotballag med drakt og heiarop.
+Last ned
