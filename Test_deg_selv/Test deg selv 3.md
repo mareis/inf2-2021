@@ -12,6 +12,12 @@ Lag et program som skriver ut de 15 første kvadrattallene. 1, 4, 9, 16, ...
 
 Lag et program som skriver ut summen av de 15 første kvadrattallene
 
+## 1.3 Summen av Kvadrattallene
+
+---
+
+Lag et program med to knapper. Den ene knappen skal øket verdien til et tall på skjermen med 1 og den andre knappen skal redusere verdien med 1.
+
 ## 2.1 Trekanttallene
 
 ---
@@ -108,6 +114,6 @@ body {
 - Lag en ny knapp øverst som legger til 10 nye `<div class="box">🔥</div>` når man trykker på den. Du må bruke en for-løkke.
 - Lag en ny knapp som fjerner alle `<div class="box">🔥</div>`.
 
-## 3.1 Input text
+## 3.1 Fotball
 
 ---
