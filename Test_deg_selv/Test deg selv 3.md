@@ -201,6 +201,6 @@ c. Legg til regler
 - Hvis Bowser får 10 så krymper mario og resten av verdiene til Mario halveres.
 - Legg til flere
 
-  Gi beskjed på skjer med <a href="https://themushroomkingdom.net/media/smb/wav">lyder</a>.
+Spill passende lyder <a href="https://themushroomkingdom.net/media/smb/wav">lyder</a>.
 
 d. Automatiser løpet når du trykker på knappen med en while-løkke.
