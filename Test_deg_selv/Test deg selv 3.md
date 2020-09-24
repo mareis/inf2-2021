@@ -143,3 +143,64 @@ Med HTML
   <source src="audio/laget.mp3" type="audio/mpeg" />
 </audio>
 ```
+
+## 3.3 Race - Mario vs Wario
+
+---
+
+<img src="https://vignette.wikia.nocookie.net/dbxfanon/images/f/f4/Mario_VS_Wario_DBX.jpg/revision/latest?cb=20190510183303">
+
+```css
+body {
+  margin: 0;
+  background-image: url("https://i.pinimg.com/originals/2b/31/4b/2b314be6c6e9c9a20a6d961a70203365.jpg");
+}
+#bane {
+  display: grid;
+  grid-gap: 30px;
+  margin-top: 80px;
+  background-size: 100%;
+}
+img {
+  height: 100px;
+  width: 70px;
+}
+.spiller {
+  width: 0%;
+  height: 100px;
+  text-align: right;
+  background-color: white;
+}
+```
+
+```html
+<input type="button" value="Kjør!" />
+<div id="bane">
+  <div id="mario" class="spiller">
+    <img src="https://emojiforu.com/wp-content/uploads/2018/10/mario.jpg" />
+  </div>
+  <div id="wario" class="spiller">
+    <img
+      src="https://www.hobbydb.com/processed_uploads/subject_photo/subject_photo/image/25525/1495493401-1830-9870/Wario_large.jpg"
+    />
+  </div>
+</div>
+```
+
+<img src="img/race.png">
+
+Når du trykker på knappen skal to tilfeldig verdier mellom 1 og 10 genereres. En for Mario og en for bowser.
+
+a. Summer verdiene hver gang du trykker på Kjør og oppdater css-en. Eks: `` marioE.style.width = `{marioProsent}%` ``
+
+b. Førstemann til 100 vinner. Nullstill verdiene spill en passende <a href="https://themushroomkingdom.net/media/smb/wav">lyd</a> og skriv ut hvem som vinner med en alert.
+
+c. Legg til regler
+
+- Hvis Mario får 10 tilsvarer det stjerne og resten av verdiene Mario får skal ganges med 2.
+- Hvis Bowser får 10 så krymper mario og resten av verdiene til Mario halveres.
+- Legg til flere
+
+  Gi beskjed på skjer med <a href="https://themushroomkingdom.net/media/smb/wav">lyder</a>.
+
+d. Automatiser løpet når du trykker på knappen med en while-løkke.
