@@ -203,4 +203,4 @@ c. Legg til regler
 
 Spill passende lyder <a href="https://themushroomkingdom.net/media/smb/wav">lyder</a>.
 
-d. Automatiser løpet når du trykker på knappen med en while-løkke.
+d. Automatiser løpet når du trykker på knappen med setIntervall.
