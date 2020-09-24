@@ -203,4 +203,17 @@ c. Legg til regler
 
 Spill passende lyder <a href="https://themushroomkingdom.net/media/smb/wav">lyder</a>.
 
-d. Automatiser løpet når du trykker på knappen med setIntervall.
+d. Automatiser løpet når du trykker på knappen med setIntervall. Nå kan du redusere de tilfeldige verdiene.
+
+```Javascript
+const raace = setInterval(()=>{
+
+    //Koden din her
+
+    if (marioProsent >= 100){
+         clearInterval(race);
+         //Skriv ut melding og spill lyd
+    }
+}, 50);
+
+```
