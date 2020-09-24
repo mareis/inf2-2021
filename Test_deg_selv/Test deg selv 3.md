@@ -206,7 +206,7 @@ Spill passende lyder <a href="https://themushroomkingdom.net/media/smb/wav">lyde
 d. Automatiser løpet når du trykker på knappen med setIntervall. Nå kan du redusere de tilfeldige verdiene.
 
 ```Javascript
-const raace = setInterval(()=>{
+const raace = setInterval(() => {
 
     //Koden din her
 
