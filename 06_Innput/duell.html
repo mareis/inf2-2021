@@ -39,6 +39,23 @@
         />
       </div>
     </div>
-    <script></script>
+    <script>
+      document.querySelector("input").addEventListener("click", () => {
+        let marioProsent = 0;
+        let warioProsent = 0;
+        const raace = setInterval(() => {
+          let marioTilfeldig = Math.random();
+          let warioTilfeldig = Math.random();
+          marioProsent += marioTilfeldig;
+          warioProsent += marioTilfeldig;
+
+          document.querySelector('#mario').style.width = `${}`;
+          if (marioProsent >= 100) {
+            clearInterval(race);
+            //Skriv ut melding og spill lyd
+          }
+        }, 50);
+      });
+    </script>
   </body>
 </html>

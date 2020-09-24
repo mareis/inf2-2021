@@ -191,7 +191,7 @@ img {
 
 Når du trykker på knappen skal to tilfeldig verdier mellom 1 og 10 genereres. En for Mario og en for bowser.
 
-a. Summer verdiene hver gang du trykker på Kjør og oppdater css-en. Eks: `` marioE.style.width = `{marioProsent}%` ``
+a. Summer verdiene hver gang du trykker på Kjør og oppdater css-en. Eks: `` marioE.style.width = `${marioProsent}%` ``
 
 b. Førstemann til 100 vinner. Nullstill verdiene spill en passende <a href="https://themushroomkingdom.net/media/smb/wav">lyd</a> og skriv ut hvem som vinner med en alert.
 
