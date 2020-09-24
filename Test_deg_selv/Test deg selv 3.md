@@ -12,7 +12,7 @@ Lag et program som skriver ut de 15 første kvadrattallene. 1, 4, 9, 16, ...
 
 Lag et program som skriver ut summen av de 15 første kvadrattallene
 
-## 1.3 Summen av Kvadrattallene
+## 1.3 Pluss og minus
 
 ---
 
@@ -56,7 +56,7 @@ Lag et program som legger til klassen box til div-en når man trykker på en kna
 Bytt ut toogle med add fra oppgaven over.
 
 ```JavaScript
-etDivElement..classList.toggle('klassenavnet');
+etDivElement.classList.toggle('klassenavnet');
 ```
 
 Det finnes også remove og replace.
@@ -75,7 +75,7 @@ Lag en knapp og legg til en toggle på div-en med usynlig-klassen
 
 ```css
 #briller {
-  font-size: 50px;
+  font-size: 100px;
 }
 .usynlig {
   display: none;
@@ -119,4 +119,27 @@ body {
 ---
 
 I denne oppgavene skal du presentere 3 fotballag med drakt og heiarop.
-Last ned
+Last ned <a href="https://mrfylke-my.sharepoint.com/:u:/g/personal/mads_opstad_reistadbakk_mrfylke_no/EQ0l4CnIp2hOnpNneElPtkkB_22yGLiW4vw4UO9QQLvlTA?e=v0aZRD">Filer</a>.
+
+<img src="https://scontent.fsvg1-1.fna.fbcdn.net/v/t1.0-9/92220762_245210226873804_2707486669740703744_n.jpg?_nc_cat=102&_nc_sid=9267fe&_nc_ohc=sZpIlS9nJR0AX_hGy6L&_nc_ht=scontent.fsvg1-1.fna&oh=9264618143465b64de8b995410b6c15a&oe=5F91BC8E" width="500px">
+
+<ol type="a">
+    <li>Lag en knapp for hvert av de tre lagene. Når man trykker på knappen så skal navnet på laget og bilde av drakta vises.</li>
+    <li>Klipp til lydfilen, med <a href="https://www.ocenaudio.com">ocenaudio</a>, slik at du får tre filer med heiaropet til de ulike lagene.</li>
+    <li>Utvid programmet til å spille lyden til laget når man trykker på knappen. </li>
+</ol>
+
+Med Javascript
+
+```Javascript
+let laget = new Audio('audio/laget.mp3');
+laget.play();
+```
+
+Med HTML
+
+```html
+<audio controls autoplay>
+  <source src="audio/laget.mp3" type="audio/mpeg" />
+</audio>
+```
