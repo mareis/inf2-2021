@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="rekursiv"></p>
+    <p id="eksplisitt"></p>
+    <script>
+      //Rekursiv formel
+      let a_1 = 4;
+      let a_n = a_1;
+      let sum_1 = a_1;
+      document.querySelector("#rekursiv").innerHTML += `a_${1} = ${a_n} <br>`;
+      for (let n = 2; n <= 15; n++) {
+        a_n = a_n + 2;
+        sum_1 = sum_1 + a_n;
+        document.querySelector("#rekursiv").innerHTML += `a_${n} = ${a_n} <br>`;
+      }
+      document.querySelector("#rekursiv").innerHTML += `S_15 = ${sum_1} <br>`;
+
+      // Eksplisitt formel
+      let sum_2 = 0;
+      for (let n = 1; n <= 15; n++) {
+        let a_n = 2 * n + 2;
+        sum_2 = sum_2 + a_n;
+        document.querySelector(
+          "#eksplisitt"
+        ).innerHTML += `a_${n} = ${a_n} <br>`;
+      }
+    </script>
+  </body>
+</html>

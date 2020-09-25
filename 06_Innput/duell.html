@@ -31,30 +31,57 @@
     <input type="button" value="Kjør!" />
     <div id="bane">
       <div id="mario" class="spiller">
-        <img src="https://emojiforu.com/wp-content/uploads/2018/10/mario.jpg" />
+        <img
+          id="marioImg"
+          src="https://emojiforu.com/wp-content/uploads/2018/10/mario.jpg"
+        />
       </div>
       <div id="wario" class="spiller">
         <img
+          id="warioImg"
           src="https://www.hobbydb.com/processed_uploads/subject_photo/subject_photo/image/25525/1495493401-1830-9870/Wario_large.jpg"
         />
       </div>
     </div>
     <script>
+      let up = new Audio("up.wav");
+      let bowserfire = new Audio("bowserfire.wav");
+      let coin = new Audio("coin.wav");
+      let worldclear = new Audio("world_clear.wav");
+      let mariodie = new Audio("mariodie.wav");
+
       document.querySelector("input").addEventListener("click", () => {
         let marioProsent = 0;
         let warioProsent = 0;
-        const raace = setInterval(() => {
+        let faktor = 1;
+        coin.play();
+
+        const race = setInterval(() => {
           let marioTilfeldig = Math.random();
           let warioTilfeldig = Math.random();
-          marioProsent += marioTilfeldig;
-          warioProsent += marioTilfeldig;
-
-          document.querySelector('#mario').style.width = `${}`;
-          if (marioProsent >= 100) {
-            clearInterval(race);
-            //Skriv ut melding og spill lyd
+          if (marioTilfeldig > 0.996) {
+            faktor *= 2;
+            up.play();
           }
-        }, 50);
+          if (warioTilfeldig > 0.995) {
+            faktor *= 0.75;
+            bowserfire.play();
+          }
+          marioProsent += (marioTilfeldig / 4) * faktor;
+          warioProsent += warioTilfeldig / 3;
+
+          document.querySelector("#mario").style.width = `${marioProsent}%`;
+          document.querySelector("#wario").style.width = `${warioProsent}%`;
+
+          if (marioProsent >= 95) {
+            clearInterval(race);
+            worldclear.play();
+          }
+          if (warioProsent >= 95) {
+            clearInterval(race);
+            mariodie.play();
+          }
+        }, 1000 / 60);
       });
     </script>
   </body>

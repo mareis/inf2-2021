@@ -198,7 +198,7 @@ b. Førstemann til 100 vinner. Nullstill verdiene spill en passende <a href="htt
 c. Legg til regler
 
 - Hvis Mario får 10 tilsvarer det stjerne og resten av verdiene Mario får skal ganges med 2.
-- Hvis Bowser får 10 så krymper mario og resten av verdiene til Mario halveres.
+- Hvis Bowser får 10 så krymper mario og resten av verdiene til Mario ganges med 0.75.
 - Legg til flere
 
 Spill passende lyder <a href="https://themushroomkingdom.net/media/smb/wav">lyder</a>.
