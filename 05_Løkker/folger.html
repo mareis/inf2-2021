@@ -19,7 +19,9 @@
         sum_1 = sum_1 + a_n;
         document.querySelector("#rekursiv").innerHTML += `a_${n} = ${a_n} <br>`;
       }
-      document.querySelector("#rekursiv").innerHTML += `S_15 = ${sum_1} <br>`;
+      document.querySelector(
+        "#rekursiv"
+      ).innerHTML += `<br>  S_15 = ${sum_1} <br>`;
 
       // Eksplisitt formel
       let sum_2 = 0;
@@ -30,6 +32,9 @@
           "#eksplisitt"
         ).innerHTML += `a_${n} = ${a_n} <br>`;
       }
+      document.querySelector(
+        "#eksplisitt"
+      ).innerHTML += `<br> S_15 = ${sum_2} <br>`;
     </script>
   </body>
 </html>
