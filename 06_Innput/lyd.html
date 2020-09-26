@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="lydknapp" type="button" value="Spill lyd" />
+
+    <script>
+      const lydknappE = document.querySelector("#lydknapp");
+      const lydklipp = new Audio("sound/klipp1.wav");
+      lydknappE.addEventListener("click", (event) => {
+        lydklipp.play();
+      });
+    </script>
+  </body>
+</html>

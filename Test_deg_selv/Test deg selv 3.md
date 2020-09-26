@@ -56,7 +56,7 @@ Lag et program som legger til klassen box til div-en når man trykker på en kna
 Bytt ut toogle med add fra oppgaven over.
 
 ```JavaScript
-etDivElement.classList.toggle('klassenavnet');
+etDivElement.classList.toggle('.klassenavnet');
 ```
 
 Det finnes også remove og replace.
@@ -136,7 +136,7 @@ let laget = new Audio('audio/laget.mp3');
 laget.play();
 ```
 
-Med HTML
+Med HTML hvis du trenger
 
 ```html
 <audio controls autoplay>
