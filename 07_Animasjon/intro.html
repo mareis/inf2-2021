@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      #box {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        background-color: red;
+        margin: auto;
+      }
+      #text {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <p id="text">Animert tekst</p>
+    </div>
+
+    <script>
+      const textE = document.querySelector("#text");
+
+      opacity = 1;
+      deg = 0;
+      textE.addEventListener("mouseover", () => {
+        const animasjon = setInterval(() => {
+          opacity = opacity - 0.01;
+          deg = deg + 1;
+
+          textE.style.opacity = opacity;
+          textE.style.transform = `rotate(${deg}deg)`;
+        });
+      });
+    </script>
+  </body>
+</html>
