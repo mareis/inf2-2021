@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppgaver på side 67</title>
+  </head>
+  <body>
+    <script>
+      // Oppgav 1
+      // Lag en funksjon sum(a, b) som returnerer
+      // sum av a og b
+      function sum(a, b) {
+        return a + b;
+      }
+      console.log("Oppgave 1");
+      console.log(`sum(3, 6) = ${sum(3, 6)}`);
+      // Oppgav 2
+      // Lag en funksjon produkt(a, b) som returnerer
+      // produktet av a og b
+      function produkt(a, b) {
+        return a * b;
+      }
+      console.log("Oppgave 2");
+      console.log(`produkt(89, 20) = ${produkt(101.05, 20)}`);
+
+      // Oppgave 3
+      // Lag en funksjon terning som returnerer en tilfeldig verdi fra 1-n
+      function terning(n) {
+        x = Math.ceil(Math.random() * n);
+        return x;
+      }
+      console.log(`terning(6) = ${terning(6)}`);
+
+      // Oppgav 4
+      // Lag en funksjon erLike(a, b) som returnerer
+      // true hvis de er like og false hvis de er ulike
+      function erLike(a, b) {
+        return a == b;
+      }
+
+      // Oppgave 5
+      // kast to terninger 10 ganger og avgjør om de er like
+      console.log("Oppgave 5");
+      for (let i = 0; i < 10; i++) {
+        let terning1 = terning(6);
+        let terning2 = terning(6);
+        console.log(
+          `${terning1} og ${terning2} er like? ${erLike(terning1, terning2)}`
+        );
+      }
+    </script>
+  </body>
+</html>

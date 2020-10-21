@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let tall = [5, 13, 2, 7, 25, 22, 18, 46, 9];
+
+      //Skrive ut lengden til arrayet
+      console.log(tall.length);
+
+      //Iterer over array, tall
+      for (let i = 0; i < tall.length; i++) {
+        console.log(tall[i]);
+      }
+
+      //Skriv ut det tredje tallet til consollen
+      console.log(tall[2]);
+
+      //Fjern verdi fra array (index, antall etter)
+      tall.splice(4, 5);
+      console.log(tall);
+    </script>
+  </body>
+</html>

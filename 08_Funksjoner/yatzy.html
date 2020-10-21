@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yatzi</title>
+  </head>
+  <body>
+    <script>
+      // Fynksjon yatzi som utfører antall terningkast som
+      // brukeren angir. Vruker parameteren antallKast
+      function yatzi(antallKast) {
+        utskrift = "";
+        for (let i = 0; i < antallKast; i++) {
+          terning = Math.ceil(Math.random() * 6);
+          utskrift = utskrift + terning + " ";
+        }
+        return utskrift;
+      }
+      console.log(yatzi(1));
+      console.log(yatzi(2));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Oppgave 1
+      console.log("Oppgave 1");
+      function erArray(input) {
+        return Array.isArray(input);
+      }
+      console.log(erArray("En tekst"));
+      console.log(erArray([4, 2, 56, 1, 4]));
+
+      // Oppgave 2
+      console.log("Oppgave 2");
+      function arrayKlone(array) {
+        return array;
+      }
+      console.log(arrayKlone([4, 2, 56, 1, 4]));
+      console.log(arrayKlone([4, 2, 56, [1, 4]]));
+
+      // Oppgave 3
+      console.log("Oppgave 3");
+      function erFørst(array) {
+        return array[0];
+      }
+      console.log(erFørst([7, 9, 0, -2]));
+      console.log(erFørst([1, 3]));
+
+      // Oppgave 4
+      console.log("Oppgave 4");
+      function erSist(array) {
+        return array[array.length - 1];
+      }
+      console.log(erSist([7, 9, 0, -2]));
+      console.log(erSist([1, 3]));
+
+      // Oppgave 5
+      console.log("Oppgave 5");
+      myColor = ["Red", "Green", "White", "Black"];
+      console.log(myColor.toString());
+      console.log(myColor.join(" + "));
+
+      // Oppgave 6
+      console.log("Oppgave 6");
+      tall = "025468";
+      utskrift = tall[0];
+      for (let i = 1; i < tall.length; i++) {
+        let a = Number(tall[i - 1]);
+        let b = Number(tall[i]);
+        utskrift += b;
+        if (a % 2 === 0 && b % 2 === 0) {
+          utskrift += "-";
+        }
+      }
+      console.log(utskrift);
+    </script>
+  </body>
+</html>

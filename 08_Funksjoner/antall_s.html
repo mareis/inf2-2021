@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="ord" type="text" />
+    <input id="knapp" type="button" value="Antall s-er" />
+    <p id="utskrift"></p>
+
+    <script>
+      const knappE = document.querySelector("#knapp");
+      knappE.addEventListener("click", finnS);
+
+      function finnS() {
+        //
+        const utskriftE = document.querySelector("#utskrift");
+        const ordE = document.querySelector("#ord");
+        let ordet = ordE.value;
+        let antS = 0;
+        for (let i = 0; i < ordet.length; i++) {
+          if (ordet[i] === "S" || ordet[i] === "s") {
+            antS++;
+          }
+        }
+
+        utskriftE.innerHTML = antS;
+      }
+    </script>
+  </body>
+</html>
