@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="antVoksne" type="number" min="1" />
+    <input id="knapp" type="button" value="Send inn" />
+    <h1>Kvitering</h1>
+
+    <div id="kvitering"></div>
+
+    <script>
+      const antVoksneE = document.querySelector("#antVoksne");
+      const knappE = document.querySelector("#knapp");
+      const kviteringE = document.querySelector("#kvitering");
+      const prisBil = 65;
+      const prisVoksen = 35;
+      let sum = 0;
+
+      knappE.addEventListener("click", (e) => {
+        if (antVoksneE.value === "") {
+          kviteringE.innerHTML = "Fyll inn antall voksne";
+        } else {
+          antVoksne = Number(antVoksneE.value);
+          kviteringE.innerHTML = `1 Bil           ${prisBil} kr`;
+          sum += prisBil;
+
+          if (antVoksne > 1) {
+            let totPrisVoksne = prisVoksen * (antVoksne - 1);
+            sum += totPrisVoksne;
+            kviteringE.innerHTML += `<br><br> ${
+              antVoksne - 1
+            } Voksne ${totPrisVoksne} kr`;
+          }
+          kviteringE.innerHTML += `<br><br> Sum ${sum} kr`;
+        }
+      });
+    </script>
+  </body>
+</html>
