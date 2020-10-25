@@ -140,3 +140,26 @@ let minListe = ["FA", "KB", "OC", "HD", "GE", "IF", "AG", "NH", "LI", "JJ", "BK"
 
 
 
+## 2.3 Valutta
+
+Lag en valuttakalkulator
+
+ 1. lag en valuttakalkulator med et inputfelt og en knapp som gjør om fra NOK til USD
+ 2. Utvid programmet med en knapp som gjør om beløpet i inputfeltet fra USD til NOK.
+
+## 2.4  Museum
+
+Det blir arrangert forskjellige aktiviteter i museet, og det skal være mulig å bestille billetter til dem direkte fra en pc i resepsjonen.
+
+Pris voksen: 100 kr
+Pris barn: 50 kr
+
+Du skal lage en applikasjon der man kan registrere antall voksne og barn og få en utskrift av bestillingen på skjermen. Applikasjonen skal beregne og vise totalprisen for bestillingen. Museet gir en grupperabatt på 20 prosent hvis man bestiller fem eller flere billetter samtidig.
+
+En typisk bestillingsutskrift skal se slik ut:
+«Du har bestilt 5 billetter, 2 voksne og 3 barn. Totalprisen er kr 280, inklusiv grupperabatt på 20 prosent.»
+
+
+## 2.5
+
+Repiter 3.2 fra test deg selv 3
