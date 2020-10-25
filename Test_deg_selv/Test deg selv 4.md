@@ -146,6 +146,7 @@ Lag en valuttakalkulator
 
  1. lag en valuttakalkulator med et inputfelt og en knapp som gjør om fra NOK til USD
  2. Utvid programmet med en knapp som gjør om beløpet i inputfeltet fra USD til NOK.
+ 3. Gi feilmelding hvis ikke feltet er fylt ut med gyldige data.
 
 ## 2.4  Museum
 
@@ -160,6 +161,7 @@ En typisk bestillingsutskrift skal se slik ut:
 «Du har bestilt 5 billetter, 2 voksne og 3 barn. Totalprisen er kr 280, inklusiv grupperabatt på 20 prosent.»
 
 
+Gi feilmelding hvis ikke feltene er fylt ut med gyldige data.
 ## 2.5
 
 Repiter 3.2 fra test deg selv 3
