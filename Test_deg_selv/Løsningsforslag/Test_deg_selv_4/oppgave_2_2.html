@@ -54,6 +54,11 @@
           utskriftE.innerHTML += `<li>${minListe[i]}</li>`;
         }
       });
+
+      document.querySelector("#knapp4").addEventListener("click", () => {
+        minListe.splice(3, 2);
+        utskrift(minListe);
+      });
     </script>
   </body>
 </html>
