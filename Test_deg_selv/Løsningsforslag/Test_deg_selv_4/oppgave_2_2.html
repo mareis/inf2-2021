@@ -43,6 +43,17 @@
       document.querySelector("#knapp2").addEventListener("click", () => {
         utskrift(minListe.sort());
       });
+
+      document.querySelector("#knapp3").addEventListener("click", () => {
+        //utskrift(minListe.filter((e, i) => i % 2 == 0)); Alternativ
+
+        //Mer tungvint
+        let utskriftE = document.querySelector("#utskrift");
+        utskriftE.innerHTML = "";
+        for (let i = 0; i < minListe.length; i = i + 2) {
+          utskriftE.innerHTML += `<li>${minListe[i]}</li>`;
+        }
+      });
     </script>
   </body>
 </html>
