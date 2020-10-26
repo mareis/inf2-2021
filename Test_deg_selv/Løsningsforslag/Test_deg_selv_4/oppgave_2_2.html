@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <input id="knapp1" type="button" value="Liste" />
+    <input id="knapp2" type="button" value="Alfabetisk" />
+    <input id="knapp3" type="button" value="Annen hvert" />
+    <input id="knapp4" type="button" value="Fjern 4 og 5" />
+
+    <ol id="utskrift"></ol>
+    <script>
+      let minListe = [
+        "FA",
+        "KB",
+        "OC",
+        "HD",
+        "GE",
+        "IF",
+        "AG",
+        "NH",
+        "LI",
+        "JJ",
+        "BK",
+        "ML",
+      ];
+
+      function utskrift(liste) {
+        let utskriftE = document.querySelector("#utskrift");
+        utskriftE.innerHTML = "";
+        for (let i = 0; i < liste.length; i++) {
+          utskriftE.innerHTML += `<li>${liste[i]}</li>`;
+        }
+      }
+
+      document.querySelector("#knapp1").addEventListener("click", () => {
+        utskrift(minListe);
+      });
+    </script>
+  </body>
+</html>
