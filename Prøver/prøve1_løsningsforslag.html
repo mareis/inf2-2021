@@ -82,6 +82,7 @@
 
       function utskrift(antPersoner, prisHytte) {
         document.querySelector(".table").style.display = "block";
+
         let perHytte = prisHytte / antPersoner;
         const d = document;
         d.querySelector("#perHytte").innerHTML = `${perHytte.toFixed(2)} kr`;
