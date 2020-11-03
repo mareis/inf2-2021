@@ -50,7 +50,7 @@ const listeE = document.querySelector("#liste");
 listeE = "";
 
 for (const x of biler) {
-  listeE += `<li class="list-group-item">${x}</li>`;
+  listeE.innerHTML += `<li class="list-group-item">${x}</li>`;
 }
 ```
 
