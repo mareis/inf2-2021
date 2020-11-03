@@ -72,7 +72,6 @@ Du kan bruke [includes()](https://www.w3schools.com/jsref/jsref_includes.asp) og
 
 
 
-
 ## Oppgave 3 Push
 ---
 
