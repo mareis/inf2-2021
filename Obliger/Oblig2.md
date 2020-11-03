@@ -16,14 +16,13 @@ osv
 
 **b)**  Lag en knapp og plukk ut et tilfeldig svar og skriv det til skjerm når man trykker på knappen. 
 
-**c)** Bruk [Bootstrap](https://getbootstrap.com/docs/4.5/components/alerts/) for å få siden til å se litt bedre ut
+**c)** Bruk [Bootstrap](https://getbootstrap.com/docs/4.5/components/alerts/) for å få siden til å se litt bedre ut ved å legge til
 
-Legg følgende til i head-tagen 
 ```HTML
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 ```
 
-og velg en av knappene [her](https://getbootstrap.com/docs/4.5/components/buttons/).
+i head-tagen. Og velg en av knappene [her](https://getbootstrap.com/docs/4.5/components/buttons/).
 
 ## Oppgave 2 for x of liste
 ---
@@ -54,7 +53,7 @@ for (const x of biler) {
 }
 ```
 
-**b)** Kommenter koden. Les om for...of [her](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
+**b)** Kommenter JavaScript-koden du limte inn i a). Les om for...of [her](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 
 **c)** Bytt ut for-løkken med den du pleier å bruke og sammenlign dem.
 
@@ -137,9 +136,7 @@ og dette i body
     </div>
 
     <ul id="liste" class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
+        <!-- <li class="list-group-item"> osv </li> -->
     </ul>
 </div>
 ```
