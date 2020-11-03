@@ -47,7 +47,7 @@ JavaScript
 let biler = ["Banan", "Eple", "Appelsin"];
 
 const listeE = document.querySelector("#liste");
-listeE = "";
+listeE.innerHTML = "";
 
 for (const x of biler) {
   listeE.innerHTML += `<li class="list-group-item">${x}</li>`;
