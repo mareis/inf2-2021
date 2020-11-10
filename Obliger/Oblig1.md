@@ -13,11 +13,12 @@ d) Skriv adressen ut på følgende to måter ved å bruke variabler: "Adressen e
 ```JavaScript
 let gate = 'Kongens gate'
 let husnr = 432
-oppgang = b
 
 adresse = gate + husnr + oppgang
 console.log(adresse)
 ```
+
+$$ f(x)=\frac{1}{2} $$
 
 ## Oppgave 2
 ---

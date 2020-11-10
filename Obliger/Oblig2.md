@@ -43,12 +43,12 @@ og dette i en script-tag
 
 JavaScript
 ```JavaScript
-let biler = ["Banan", "Eple", "Appelsin"];
+let frukter = ["Banan", "Eple", "Appelsin"];
 
 const listeE = document.querySelector("#liste");
 listeE.innerHTML = "";
 
-for (const x of biler) {
+for (const x of frukter) {
   listeE.innerHTML += `<li class="list-group-item">${x}</li>`;
 }
 ```
@@ -59,7 +59,7 @@ for (const x of biler) {
 
 **d)** Bytt ut listen med listen din fra oppgave 1 og bruk den forløkka du syns passer best i dette tilfelle
 
-**c)** Bruk det ordet som forekommer flest ganger i listen din og lag en if-setning i for-løkken din som skjekker om ordet forekommer i listeelementet.
+**e)** Bruk det ordet som forekommer flest ganger i listen din og lag en if-setning i for-løkken din som skjekker om ordet forekommer i listeelementet.
 
 Hvis ordet forekommer skal du skrive ut 
 
