@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let bok = {
+        farge: "rosa",
+        tittel: "Informasjonsteknologi 2",
+        forfatter: "Lars Nersveen",
+        antSider: 334,
+        forlag: "Aschehoug",
+      };
+
+      console.log(bok);
+      console.log(bok.tittel);
+      console.log(bok.antSider);
+
+      console.log(bok["tittel"]);
+      let egenskap = "forfatter";
+      console.log(bok[egenskap]);
+
+      let person = {
+        navn: "Mario",
+        iq: 80,
+        hoyde: 155,
+        yrke: "Rørlegger",
+      };
+
+      console.log(
+        `${person.yrke} ${person.navn} er ${person.hoyde} cm høy og har en iq på ${person.iq}.`
+      );
+    </script>
+  </body>
+</html>

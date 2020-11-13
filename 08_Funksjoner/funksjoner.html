@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //    Vanlig function
+      //   function hilsen() {
+      //     console.log(`Hei på deg!`);
+      //   }
+
+      // Vanlig funksjon med parameter
+      function hilsen(navn) {
+        console.log(`Hei, ${navn}!`);
+      }
+
+      //    Funksjoner uten return-verdi skal vi bruke
+      //    til å skrive ut ting til domen
+
+      //    let navneliste = ["Mario", "Luigi", "Peach"];
+
+      //    Tre metod for å traversere array og kalle på funksjon
+
+      //   for (let i = 0; i < navneliste.length; i++) {
+      //     hilsen(navneliste[i]);
+      //   }
+
+      //   for (let navn of navneliste) {
+      //     hilsen(navn);
+      //   }
+
+      //   navneliste.forEach(hilsen);
+
+      //    Arrow function
+      //   const hilsen = () => {
+      //     console.log(`Hei på deg!`);
+      //   };
+
+      //   const hilsen = () => console.log(`Hei på deg!`);
+
+      hilsen("Mario");
+      hilsen("Luigi");
+      hilsen("Peach");
+    </script>
+  </body>
+</html>

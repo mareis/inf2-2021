@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="knapper"></div>
+
+    <script>
+      let fotballlag1 = { navn: "Milan", lydfil: "milan.mp3" };
+      let fotballlag2 = { navn: "Roma", lydfil: "roma.mp3" };
+      let fotballlag3 = { navn: "Inter", lydfil: "inter.mp3" };
+
+      let fotballagene = [fotballlag1, fotballlag2, fotballlag3];
+
+      function lagKnapp(fotballlag) {
+        const knapperE = document.querySelector("#knapper");
+        knapperE.innerHTML += `<input type="button" value=${fotballlag.navn} />`;
+      }
+
+      fotballagene.forEach(lagKnapp);
+    </script>
+  </body>
+</html>

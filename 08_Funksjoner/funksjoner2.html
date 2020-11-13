@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="liste"></ul>
+
+    <script>
+      const listeE = document.querySelector("#liste");
+
+      //   listeE.innerHTML += `<li>Mario</li>`;
+      //   liste.innerHTML += `<li>Luigi</li>`;
+
+      function skrivUtLi(navn) {
+        listeE.innerHTML += `<li>${navn}</li>`;
+      }
+      //    Alternativ med arrow
+      //    let skrivUtLi = (navn) => (listeE.innerHTML += `<li>${navn}</li>`);
+
+      skrivUtLi("Mario");
+      skrivUtLi("Luigi");
+
+      let navneliste = ["Mario", "Luigi", "Peach"];
+
+      liste.innerHTML = "";
+      for (let i = 0; i < navneliste.length; i++) {
+        skrivUtLi(navneliste[i]);
+      }
+
+      liste.innerHTML = "";
+      for (let navn of navneliste) {
+        skrivUtLi(navn);
+      }
+
+      liste.innerHTML = "";
+      navneliste.forEach(skrivUtLi);
+    </script>
+  </body>
+</html>

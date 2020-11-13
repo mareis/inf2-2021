@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let frukt1 = { navn: "Eple", farge: "rød" };
+      let frukt2 = { navn: "Banan", farge: "gul" };
+      let frukt3 = { navn: "Pære", farge: "grønn" };
+
+      let frukter = [frukt1, frukt2, frukt3];
+
+      function skrivUtFrukt(frukt) {
+        console.log(`${frukt.navn} er ${frukt.farge}.`);
+      }
+
+      for (let i = 0; i < frukter.length; i++) {
+        skrivUtFrukt(frukter[i]);
+      }
+
+      frukter.forEach(skrivUtFrukt);
+    </script>
+  </body>
+</html>
