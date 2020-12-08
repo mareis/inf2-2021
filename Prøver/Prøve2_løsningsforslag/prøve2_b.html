@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Til oppgave A</title>
+
+    <style>
+        tbody tr:hover {
+            background-color: cadetblue;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-sm">
+        <h1>Firkanter</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col">Type firkant</th>
+                    <th scope="col">Bunnlinje</th>
+                    <th scope="col">Topplinje</th>
+                    <th scope="col">Høyde</th>
+                    <th scope="col">Forskyvning</th>
+                    <th scope="col">Areal</th>
+                </tr>
+            </thead>
+            <tbody id="tabell">
+
+            </tbody>
+        </table>
+
+        <svg width="1200" height="800">
+            <g>
+                <title>Layer 1</title>
+                <path id="firkant" d="M 0 0 L 300 0 L 300 150 L 0 150 Z" fill="#4a90d6" stroke="#222222"
+                    stroke-width="4" style="color: rgb(0, 0, 0);" />
+            </g>
+        </svg>
+    </div>
+    <script>
+        let firkanter = [
+            {
+                navn: "Kvadrat",
+                bunnlinje: 10,
+                topplinje: 10,
+                hoyde: 10,
+                forskyvning: 0,
+                areal: 100
+            },
+            {
+                navn: "Rektangel",
+                bunnlinje: 20,
+                topplinje: 20,
+                hoyde: 5,
+                forskyvning: 0,
+                areal: 100
+            },
+            {
+                navn: "Parallellogram",
+                bunnlinje: 20,
+                topplinje: 20,
+                hoyde: 10,
+                forskyvning: 2,
+                areal: 200
+            },
+            {
+                navn: "Trapes",
+                bunnlinje: 20,
+                topplinje: 10,
+                hoyde: 5,
+                forskyvning: 2,
+                areal: 75
+            },
+            {
+                navn: "Trapes",
+                bunnlinje: 5,
+                topplinje: 3,
+                hoyde: 10,
+                forskyvning: 5,
+                areal: 40
+            }
+        ];
+
+
+        function skrivUtTabell(firkanter) {
+            const tabellE = document.querySelector("#tabell");
+            tabellE.innerHTML = "";
+            firkanter.forEach((firkant, i) => {
+                tabellE.innerHTML +=
+                    `
+                    <tr onclick="tegnFirkant(${i})">
+                        <th scope="row">${firkant.navn}</th>
+                        <td>${firkant.bunnlinje}</td>
+                        <td>${firkant.topplinje}</td>
+                        <td>${firkant.hoyde}</td>
+                        <td>${firkant.forskyvning}</td>
+                        <td>${firkant.areal}</td>
+                    </tr>
+                `
+            })
+        }
+        skrivUtTabell(firkanter)
+
+        function tegnFirkant(i) {
+            const firkantE = document.querySelector("#firkant");
+            firkantE.setAttribute(
+                "d",
+                `M ${firkanter[i].forskyvning * 50} 0 L ${firkanter[i].forskyvning * 50 + firkanter[i].topplinje * 50} 0 L ${firkanter[i].bunnlinje * 50} ${firkanter[i].hoyde * 50} L 0 ${firkanter[i].hoyde * 50} Z`
+            )
+        }
+    </script>
+</body>
+
+</html>
