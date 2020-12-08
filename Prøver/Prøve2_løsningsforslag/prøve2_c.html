@@ -112,7 +112,6 @@
             }
         ];
 
-
         function skrivUtTabell(firkanter) {
             const tabellE = document.querySelector("#tabell");
             tabellE.innerHTML = "";
@@ -139,7 +138,6 @@
                 `M ${firkanter[i].forskyvning * 50} 0 L ${firkanter[i].forskyvning * 50 + firkanter[i].topplinje * 50} 0 L ${firkanter[i].bunnlinje * 50} ${firkanter[i].hoyde * 50} L 0 ${firkanter[i].hoyde * 50} Z`
             )
         }
-
         function leggTilFirkant() {
             let bunnlinje = Number(document.querySelector("#bunnlinje").value);
             let topplinje = Number(document.querySelector("#topplinje").value);
