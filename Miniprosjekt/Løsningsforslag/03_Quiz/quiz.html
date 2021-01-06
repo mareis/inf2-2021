@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Julequiz</title>
+
+    <style>
+        header {
+            background: url(https://haugalandvekst.no/app/uploads/2018/12/hvekst-julebanner-nettside2.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 200px;
+
+        }
+
+        header h1 {
+            padding: 30px;
+        }
+
+        #alternativer li:hover {
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Julequiz</h1>
+    </header>
+
+    <div class="container-sm">
+
+        <h3 id="sporsmal">Spørsmålstekst ......</h3>
+        <hr>
+
+        <div class="card">
+            <div class="card-header">
+                Svaralternativer
+            </div>
+            <ul class="list-group list-group-flush" id="alternativer"></ul>
+        </div>
+    </div>
+
+
+    <script>
+        let quiz = [
+            {
+                sporsmol: "Hva er favorittjulesangen til Rune i 2020?",
+                alternativer: ["Himmel på jord", "Stille natt", "O helga natt"],
+                fasit: 0,
+                svar: null
+            },
+            {
+                sporsmol: "Hva er den mest sette julefilmen på julaften i Norge",
+                alternativer: ["Love actualy", "Hjemme alene", "Tre nøtter til Askepott"],
+                fasit: 2,
+                svar: null
+            }
+        ]
+
+
+        const sporsmalE = document.querySelector("#sporsmal");
+        const alternativerE = document.querySelector("#alternativer");
+        function skrivUt(n) {
+            sporsmalE.innerHTML = quiz[n].sporsmol;
+            alternativerE.innerHTML = "";
+            quiz[n].alternativer.forEach((alternativ, i) => {
+                alternativerE.innerHTML += `<li onclick="svar(${n, i})" class="list-group-item">${alternativ}</li>`;
+            })
+        }
+        skrivUt(0)
+
+        function svar(n, i) {
+
+            alert(n, i)
+            if (n < quiz.length) {
+                //Skriv ut raport
+            }
+            else {
+                //fortsett 
+            }
+        }
+
+    </script>
+</body>
+
+</html>
