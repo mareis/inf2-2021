@@ -7,36 +7,70 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Oppgave 2</title>
+    <style>
+        .pakker {
+            margin: auto;
+            max-width: 400px;
+        }
+    </style>s
 </head>
 
 <body>
-    <div id="form">
-        <div class="form-check">
-            <input class="form-check-input intensitet" type="radio" name="flexRadioDefault" id="lav" value="0.8">
-            <label class="form-check-label" for="flexRadioDefault1">
-                Lav
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input intensitet" type="radio" name="flexRadioDefault" id="mid" value="1" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-                Middels
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input intensitet" type="radio" name="flexRadioDefault" id="hoy" value="1.2">
-            <label class="form-check-label" for="flexRadioDefault2">
-                Høy
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary" id="knapp">Reg ut</button>
-    </div>
+    <div class="container-sm pakker">
+        <h2>Kalorikalkulator</h2>
+        <div id="form">
+            <select id="aktivitet" class="form-select" aria-label="Default select example">
+                <option selected>Velg aktivitet</option>
+                <option value="814">Aerobics</option>
+                <option value="236">Bordtennis</option>
+                <option value="510">Fotball</option>
+                <option value="244">Golf</option>
+                <option value="666">Jogging</option>
+            </select>
+            <br>
+            <p>Velg instesitet:</p>
+            <div class="form-check">
+                <input class="form-check-input intensitet" type="radio" name="flexRadioDefault" id="lav" value="0.8">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Lav
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input intensitet" type="radio" name="flexRadioDefault" id="mid" value="1"
+                    checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Middels
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input intensitet" type="radio" name="flexRadioDefault" id="hoy" value="1.2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Høy
+                </label>
+            </div>
 
+            <br>
+            <div class="mb-3">
+                <label for="minutter" class="form-label">Oppgi varigheten på treningen i minutter:</label>
+                <input type="number" class="form-control" id="varighet">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="knapp">Beregn kaloriforbruk</button>
+
+
+        </div>
+        <br>
+        <div id="utskrift"></div>
+    </div>
 
     <script>
         const knappE = document.querySelector("#knapp");
 
+
         knappE.addEventListener("click", (e) => {
+
+            const aktivitet = Number(document.querySelector("#aktivitet").value)
+
             const intensitetE = document.querySelectorAll(".intensitet");
             intensitet = 1
             intensitetE.forEach((radio) => {
@@ -44,10 +78,16 @@
                     intensitet = Number(radio.value)
                 }
             })
-            console.log(intensitet);
+
+            const varighet = Number(document.querySelector("#varighet").value)
+
+            const utskriftE = document.querySelector("#utskrift")
+            const forbruk = aktivitet * intensitet * varighet / 60
+            utskriftE.innerHTML = `
+              <b>Kaloriforbruk:</b> ${forbruk.toFixed(0)} kcal.
+            `;
 
         })
-
     </script>
 
 </body>
