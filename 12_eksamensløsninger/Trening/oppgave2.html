@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Oppgave 2</title>
+</head>
+
+<body>
+    <div id="form">
+        <div class="form-check">
+            <input class="form-check-input instensitet" type="radio" name="flexRadioDefault" id="lav" value="0.8">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Lav
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input instensitet" type="radio" name="flexRadioDefault" id="mid" value="1" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                Middels
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input instensitet" type="radio" name="flexRadioDefault" id="hoy" value="1.2">
+            <label class="form-check-label" for="flexRadioDefault2">
+                Høy
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="knapp">Reg ut</button>
+    </div>
+
+
+    <script>
+        const knappE = document.querySelector("#knapp");
+
+        knappE.addEventListener("click", (e) => {
+            const intensitetE = document.querySelectorAll(".intensitet");
+            intensitet = 1
+            intensitetE.forEach((radio) => {
+                console.log(radio.checked);
+                if (radio.checked == true) {
+                    intensitet = Number(radio.value)
+                }
+            })
+            console.log(intensitet);
+
+        })
+
+    </script>
+
+</body>
+
+</html>
