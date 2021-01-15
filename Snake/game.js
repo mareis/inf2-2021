@@ -1,5 +1,5 @@
 let lastRenderTime = 0
-const SNAKE_SPEED = 2
+const SNAKE_SPEED = 5
 const gameBoard = document.querySelector("#game-board");
 function main(currentTime) {
     window.requestAnimationFrame(main);
@@ -18,20 +18,28 @@ window.requestAnimationFrame(main)
 const snakeBody = [
     { x: 11, y: 11 }
 ]
+let food = { x: 0, y: 0 };
+
 let inputDirection = { x: 0, y: 0 };
+let lastInputDirection = { x: 0, y: 0 };
 function update() {
+    lastInputDirection = inputDirection;
     window.addEventListener("keydown", e => {
         switch (e.key) {
             case 'ArrowUp':
+                if (lastInputDirection.y !== 0) break
                 inputDirection = { x: 0, y: -1 };
                 break
             case 'ArrowDown':
+                if (lastInputDirection.y !== 0) break
                 inputDirection = { x: 0, y: 1 };
                 break
             case 'ArrowRight':
+                if (lastInputDirection.x !== 0) break
                 inputDirection = { x: 1, y: 0 };
                 break
             case 'ArrowLeft':
+                if (lastInputDirection.x !== 0) break
                 inputDirection = { x: -1, y: 0 };
                 break
         }
@@ -54,5 +62,11 @@ function draw() {
         gameBoard.appendChild(snakeElement);
 
     })
+
+    const foodElement = document.createElement('div');
+    foodElement.style.gridRowStart = food.y;
+    foodElement.style.gridColumnStart = food.x;
+    foodElement.classList.add('food')
+    gameBoard.appendChild(foodElement);
 }
 
