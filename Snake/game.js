@@ -16,17 +16,32 @@ function main(currentTime) {
 window.requestAnimationFrame(main)
 
 const snakeBody = [
-    { x: 10, y: 11 },
-    { x: 11, y: 11 },
-    { x: 12, y: 11 }
+    { x: 11, y: 11 }
 ]
-
+let inputDirection = { x: 0, y: 0 };
 function update() {
+    window.addEventListener("keydown", e => {
+        switch (e.key) {
+            case 'ArrowUp':
+                inputDirection = { x: 0, y: -1 };
+                break
+            case 'ArrowDown':
+                inputDirection = { x: 0, y: 1 };
+                break
+            case 'ArrowRight':
+                inputDirection = { x: 1, y: 0 };
+                break
+            case 'ArrowLeft':
+                inputDirection = { x: -1, y: 0 };
+                break
+        }
+    })
+
     for (let i = snakeBody.length - 2; i >= 0; i--) {
         snakeBody[i + 1] = { ...snakeBody[i] }
     }
-    snakeBody[0].x += 1;
-    snakeBody[0].y += 0;
+    snakeBody[0].x += inputDirection.x;
+    snakeBody[0].y += inputDirection.y;
 }
 
 function draw() {
@@ -40,3 +55,4 @@ function draw() {
 
     })
 }
+
