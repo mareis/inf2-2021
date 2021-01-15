@@ -22,7 +22,7 @@ const snakeBody = [
 ]
 
 function update() {
-    for (let i = snakeBody.length - 2; i > 0; i--) {
+    for (let i = snakeBody.length - 2; i >= 0; i--) {
         snakeBody[i + 1] = { ...snakeBody[i] }
     }
     snakeBody[0].x += 1;
@@ -30,6 +30,7 @@ function update() {
 }
 
 function draw() {
+    gameBoard.innerHTML = "";
     snakeBody.forEach(segment => {
         const snakeElement = document.createElement('div');
         snakeElement.style.gridRowStart = segment.y;
