@@ -1,5 +1,6 @@
 let lastRenderTime = 0
 const SNAKE_SPEED = 5
+const EXPANTION_RATE = 1
 const gameBoard = document.querySelector("#game-board");
 function main(currentTime) {
     window.requestAnimationFrame(main);
@@ -50,6 +51,12 @@ function update() {
     }
     snakeBody[0].x += inputDirection.x;
     snakeBody[0].y += inputDirection.y;
+
+
+    if (onSnake(food)) {
+        expandSnake(EXPANSION_RATE)
+        food = { x: 20, y: 10 }
+    }
 }
 
 function draw() {
@@ -70,3 +77,15 @@ function draw() {
     gameBoard.appendChild(foodElement);
 }
 
+function expandSnake(amount) {
+    newSegments += amount;
+
+}
+function onSnake(position) {
+    return snakeBody.some(segment => {
+        return equalPosition(segment, position)
+    })
+}
+function equalPosition(pos1, pos2) {
+    return pos1.x === pos2.x && pos1.y === pos2.y;
+}

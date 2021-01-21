@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+        .wrap {
+            max-width: 400px;
+        }
+    </style>
+    <title>
+
+    </title>
+</head>
+
+<div class="container-sm wrap">
+    <h1>Trening</h1>
+
+    <div>
+        <input class="form-check-input aktivitet" type="radio" name="aktivitet" id="loping">
+        <label class="form-check-label" for="loping">Løping</label>
+        <br>
+        <input class="form-check-input aktivitet" type="radio" name="aktivitet" id="ski">
+        <label class="form-check-label" for="ski">Ski</label>
+        <br>
+        <input class="form-check-input aktivitet" type="radio" name="aktivitet" id="sykkel">
+        <label class="form-check-label" for="sykkel">Sykkel</label>
+
+        <br>
+
+        <label for="tid" class="form-label">Tid</label>
+        <input type="number" class="form-control" id="tid">
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Aktivitet</th>
+                <th>Tid</th>
+            </tr>
+        </thead>
+        <tbody id=tabell>
+        </tbody>
+    </table>
+</div>
+
+<body>
+
+
+    <script>
+
+
+
+        trenging = [
+            { aktivitet: "løping", totaltid: 0 },
+            { aktivitet: "ski", totaltid: 0 },
+            { aktivitet: "sykkel", totaltid: 0 }
+        ]
+
+        const tabellE = document.querySelector("#tabell");
+        trenging.forEach(t => {
+            tabellE.innerHTML += `
+            <tr>
+                <td>${t.aktivitet}</td>
+                <td>${t.totaltid}</td>
+            </tr>
+            `;
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>
