@@ -37,7 +37,10 @@
 
         <button type="submit" id="knapp" class="btn btn-primary">Legg til treningsøkt</button>
     </div>
+    <br>
+    <div id="alert" class="alert alert-success"></div>
 
+    <br>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -60,6 +63,8 @@
             { aktivitet: "sykkel", totaltid: 0 }
         ]
 
+        skrivUtTabell()
+
         const knappE = document.querySelector("#knapp");
         knappE.addEventListener('click', (e) => {
             const aktiviteter = document.querySelectorAll(".aktivitet");
@@ -69,16 +74,25 @@
                 console.log(aktivitet.checked, i)
                 if (aktivitet.checked) {
                     trenging[i].totaltid += Number(tidE.value)
+
+                    skrivUtSisteOkt(trenging[i].aktivitet, Number(tidE.value));
                 }
             })
-
             skrivUtTabell();
         })
 
 
+        function skrivUtSisteOkt(aktivitet, tid) {
+            const alertE = document.querySelector("#alert");
+            alertE.innerHTML = `
+            Din siste treningsøkt var ${aktivitet} og varte i ${tid} minutter.
+            
+            `;
+        }
 
         function skrivUtTabell() {
             const tabellE = document.querySelector("#tabell");
+            tabellE.innerHTML = "";
             trenging.forEach(t => {
                 tabellE.innerHTML += `
             <tr>
