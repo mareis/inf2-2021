@@ -35,7 +35,7 @@
         <label for="tid" class="form-label">Tid</label>
         <input type="number" class="form-control" id="tid">
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="knapp" class="btn btn-primary">Legg til treningsøkt</button>
     </div>
 
     <table class="table table-striped">
@@ -54,24 +54,41 @@
 
 
     <script>
-
-
-
         trenging = [
             { aktivitet: "løping", totaltid: 0 },
             { aktivitet: "ski", totaltid: 0 },
             { aktivitet: "sykkel", totaltid: 0 }
         ]
 
-        const tabellE = document.querySelector("#tabell");
-        trenging.forEach(t => {
-            tabellE.innerHTML += `
+        const knappE = document.querySelector("#knapp");
+        knappE.addEventListener('click', (e) => {
+            const aktiviteter = document.querySelectorAll(".aktivitet");
+            const tidE = document.querySelector("#tid");
+
+            aktiviteter.forEach((aktivitet, i) => {
+                console.log(aktivitet.checked, i)
+                if (aktivitet.checked) {
+                    trenging[i].totaltid += Number(tidE.value)
+                }
+            })
+
+            skrivUtTabell();
+        })
+
+
+
+        function skrivUtTabell() {
+            const tabellE = document.querySelector("#tabell");
+            trenging.forEach(t => {
+                tabellE.innerHTML += `
             <tr>
                 <td>${t.aktivitet}</td>
                 <td>${t.totaltid}</td>
             </tr>
             `;
-        });
+            });
+        }
+
 
 
 
