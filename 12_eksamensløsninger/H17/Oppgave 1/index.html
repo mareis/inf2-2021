@@ -88,7 +88,7 @@
             visningE.style.display = 'block'
             const bilder = ["bildegalleri01.jpg", "bildegalleri02.jpg", "bildegalleri03.jpg"];
             let nr = 0;
-            galleri = () => {
+            galleri = setInterval(() => {
                 console.log(nr);
                 if (nr < bilder.length - 1) {
                     nr++
