@@ -83,11 +83,12 @@
             `;
             visningE.style.display = 'block'
         }
+        let galleri;
         function mdg() {
             visningE.style.display = 'block'
             const bilder = ["bildegalleri01.jpg", "bildegalleri02.jpg", "bildegalleri03.jpg"];
             let nr = 0;
-            const galleri = setInterval(() => {
+            galleri = () => {
                 console.log(nr);
                 if (nr < bilder.length - 1) {
                     nr++
@@ -100,6 +101,9 @@
         }
 
         function skjulVisning() {
+            if (galleri) {
+                clearInterval(galleri);
+            }
             visningE.style.display = 'none';
             innholdE.innerHTML = "";
         }
