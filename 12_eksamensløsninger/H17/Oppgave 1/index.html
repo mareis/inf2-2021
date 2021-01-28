@@ -84,7 +84,8 @@
             visningE.style.display = 'block'
         }
         function mdg() {
-            const bilder = ["bildegaller01.jpg", "bildegaller02.jpg", "bildegaller03.jpg"];
+            visningE.style.display = 'block'
+            const bilder = ["bildegalleri01.jpg", "bildegalleri02.jpg", "bildegalleri03.jpg"];
             let nr = 0;
             const galleri = setInterval(() => {
                 console.log(nr);
@@ -94,6 +95,7 @@
                 else {
                     nr = 0
                 }
+                innholdE.innerHTML = `<img src="media/${bilder[nr]}">`;
             }, 2000)
         }
 
