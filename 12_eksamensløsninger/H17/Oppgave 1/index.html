@@ -23,6 +23,16 @@
             cursor: pointer;
             border: 5px solid black;
         }
+
+        #visning {
+            background-color: beige;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            left: 0;
+            top: 0;
+            visibility: hidden;
+        }
     </style>
 </head>
 
@@ -44,20 +54,25 @@
             <img src="media/venstre.png" alt="">
         </div>
 
-        <div id="visning"></div>
+        <div id="visning">
+            <button onclick="skjulVisning()"> X </button>
+            <div id="innhold"></div>
+        </div>
 
 
     </div>
 
     <script>
         const visningE = document.querySelector("#visning");
+        const innholdE = document.querySelector("#innhold");
         function sp() {
-            visningE.innerHTML = `
-            <video width="320" height="180" controls>
+            innholdE.innerHTML = `
+            <video width="320" height="180" controls autoplay>
                 <source src="media/sp.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             `;
+            visningE.style.visibility = 'visible'
         }
     </script>
 </body>
