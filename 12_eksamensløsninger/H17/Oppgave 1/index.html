@@ -31,7 +31,14 @@
             width: 100vw;
             left: 0;
             top: 0;
-            visibility: hidden;
+            display: none;
+        }
+
+        #visning button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 3em;
         }
     </style>
 </head>
@@ -56,7 +63,7 @@
 
         <div id="visning">
             <button onclick="skjulVisning()"> X </button>
-            <div id="innhold"></div>
+            <div class="container-sm" id="innhold"></div>
         </div>
 
 
@@ -65,15 +72,36 @@
     <script>
         const visningE = document.querySelector("#visning");
         const innholdE = document.querySelector("#innhold");
+
         function sp() {
             innholdE.innerHTML = `
+            <h2>Senterpartiet</h2>
             <video width="320" height="180" controls autoplay>
                 <source src="media/sp.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             `;
-            visningE.style.visibility = 'visible'
+            visningE.style.display = 'block'
         }
+        function mdg() {
+            const bilder = ["bildegaller01.jpg", "bildegaller02.jpg", "bildegaller03.jpg"];
+            let nr = 0;
+            const galleri = setInterval(() => {
+                console.log(nr);
+                if (nr < biler.length - 1) {
+                    nr++
+                }
+                else {
+                    nr = 0
+                }
+            }, 2000)
+        }
+
+        function skjulVisning() {
+            visningE.style.display = 'none';
+            innholdE.innerHTML = "";
+        }
+
     </script>
 </body>
 
