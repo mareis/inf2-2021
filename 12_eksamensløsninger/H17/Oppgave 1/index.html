@@ -84,18 +84,24 @@
             visningE.style.display = 'block'
         }
         let galleri;
+        let piano;
         function mdg() {
             visningE.style.display = 'block'
             const bilder = ["bildegalleri01.jpg", "bildegalleri02.jpg", "bildegalleri03.jpg"];
+            piano = new Audio("media/piano.mp3");
+
+            piano.play();
+
             let nr = 0;
+            innholdE.innerHTML = `<img src="media/${bilder[nr]}">`;
             galleri = setInterval(() => {
-                console.log(nr);
                 if (nr < bilder.length - 1) {
                     nr++
                 }
                 else {
                     nr = 0
                 }
+                piano.play();
                 innholdE.innerHTML = `<img src="media/${bilder[nr]}">`;
             }, 2000)
         }
@@ -103,6 +109,8 @@
         function skjulVisning() {
             if (galleri) {
                 clearInterval(galleri);
+                piano.pause();
+
             }
             visningE.style.display = 'none';
             innholdE.innerHTML = "";
