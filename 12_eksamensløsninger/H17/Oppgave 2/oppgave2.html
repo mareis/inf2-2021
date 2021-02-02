@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Oppgave 2</title>
+</head>
+
+<body>
+
+    <div class="container-sm">
+        <br>
+        <h2>Fyll inn valgoppslutningen</h2>
+        <br>
+        <div class="form">
+            <div id="input"></div>
+            <input id="knapp" type="submit" value="Lett til">
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Datastruktur. Blokk 0 = Ingen blokk, Blokk 1 = Rødgrøndt og Blokk 2 = Borgerlig
+        const partier = [
+            {
+                parti: "Rødt",
+                prosent: 0,
+                blokk: 0
+            },
+            {
+                parti: "SV",
+                prosent: 0,
+                blokk: 1
+            },
+            {
+                parti: "A",
+                prosent: 0,
+                blokk: 1
+            },
+            {
+                parti: "SP",
+                prosent: 0,
+                blokk: 1
+            },
+            {
+                parti: "MDG",
+                prosent: 0,
+                blokk: 0
+            },
+            {
+                parti: "KRF",
+                prosent: 0,
+                blokk: 2
+            },
+            {
+                parti: "V",
+                prosent: 0,
+                blokk: 2
+            },
+            {
+                parti: "H",
+                prosent: 0,
+                blokk: 2
+            },
+            {
+                parti: "FRP",
+                prosent: 0,
+                blokk: 2
+            },
+            {
+                parti: "PIR",
+                prosent: 0,
+                blokk: 0
+            }
+        ]
+
+        const inputE = document.querySelector("#input");
+        partier.forEach(parti => {
+            inputE.innerHTML += `
+                <div class="mb-3">
+                    <label class="form-label" for="${parti.parti}">${parti.parti}</label>
+                    <input class="form-control partier" type="number" name="" id="${parti.parti}">
+                </div>
+            `;
+        })
+
+        const knappE = document.querySelector("#knapp");
+        let partiNodeListe;
+        knappE.addEventListener('click', e => {
+            partiNodeListe = document.querySelectorAll('.partier')
+            partiNodeListe.forEach((partiE, i) => {
+                partier[i].prosent = Number(partiE.value)
+            })
+            skrivUtResultat();
+        })
+
+
+        function skrivUtResultat() {
+            blokk_1 = 0;
+            blokk_2 = 0;
+
+            partier.forEach(parti => {
+                if (parti.blokk === 1) {
+                    blokk_1 += parti.prosent;
+                }
+                else if (parti.blokk === 2) {
+                    blokk_2 += parti.prosent;
+                }
+            })
+
+            if (blokk_1 > blokk_2) {
+
+            }
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
