@@ -21,6 +21,7 @@
         </div>
 
         <div id="utskrift"></div>
+        <div id="diagram"></div>
 
     </div>
 
@@ -80,7 +81,7 @@
                 blokk: 0
             }
         ]
-
+        let block_0, blokk_1, blokk_2;
         const inputE = document.querySelector("#input");
         partier.forEach(parti => {
             inputE.innerHTML += `
@@ -99,11 +100,13 @@
                 partier[i].prosent = Number(partiE.value)
             })
             skrivUtResultat();
+            skrivUtDiagram();
         })
 
 
         function skrivUtResultat() {
-            blokk_1 = 0;
+            block_0 =
+                blokk_1 = 0;
             blokk_2 = 0;
 
             partier.forEach(parti => {
@@ -113,20 +116,23 @@
                 else if (parti.blokk === 2) {
                     blokk_2 += parti.prosent;
                 }
+                else if (parti.blokk === 0) {
+                    blokk_0 += parti.prosent;
+                }
             })
 
             const utskriftE = document.querySelector("#utskrift");
             if (blokk_1 > blokk_2) {
                 utskriftE.innerHTML = `            
                 <div class="alert alert-success" role="alert">
-                    Rødgrønn blokk vant skolevalget med ${blokk_2 - blokk_1} prosentpoeng.
+                    Rødgrønn blokk vant skolevalget med ${blokk_1 - blokk_2} prosentpoeng.
                 </div>
                 `;
             }
             else if (blokk_2 > blokk_1) {
                 utskriftE.innerHTML = `            
                 <div class="alert alert-success" role="alert">
-                    Borgerlig blokk vant skolevalget med ${blokk_1 - blokk_2} prosentpoeng.
+                    Borgerlig blokk vant skolevalget med ${blokk_2 - blokk_1} prosentpoeng.
                 </div>
                 `;
             }
@@ -137,7 +143,9 @@
                 </div>
                 `;
             }
+        }
 
+        function diagram() {
 
         }
 
