@@ -20,6 +20,8 @@
             <input id="knapp" type="submit" value="Lett til">
         </div>
 
+        <div id="utskrift"></div>
+
     </div>
 
 
@@ -113,8 +115,27 @@
                 }
             })
 
+            const utskriftE = document.querySelector("#utskrift");
             if (blokk_1 > blokk_2) {
-
+                utskriftE.innerHTML = `            
+                <div class="alert alert-success" role="alert">
+                    Rødgrønn blokk vant skolevalget med ${blokk_2 - blokk_1} prosentpoeng.
+                </div>
+                `;
+            }
+            else if (blokk_2 > blokk_1) {
+                utskriftE.innerHTML = `            
+                <div class="alert alert-success" role="alert">
+                    Borgerlig blokk vant skolevalget med ${blokk_1 - blokk_2} prosentpoeng.
+                </div>
+                `;
+            }
+            else {
+                utskriftE.innerHTML = `            
+                <div class="alert alert-success" role="alert">
+                    Det ble uavgjort!
+                </div>
+                `;
             }
 
 
