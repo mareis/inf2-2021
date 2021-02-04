@@ -9,7 +9,7 @@
 
     <style>
         .soyle {
-            height: 20px;
+            height: 60px;
             margin-bottom: 5px;
             background-color: darkgreen;
             color: white;
@@ -159,13 +159,13 @@
         function skrivUtDiagram() {
             const diagramE = document.querySelector("#diagram");
             diagramE.innerHTML = `
-                <div class="soyle">Ingen blokk</div>
-                <div class="soyle">Rødgrønn blokk</div>
-                <div class="soyle">Borgerlig blokk</div>
+                <div class="soyle">Ingen blokk ${blokk[0]} %</div>
+                <div class="soyle">Rødgrønn blokk ${blokk[1]} %</div>
+                <div class="soyle">Borgerlig blokk ${blokk[2]} %</div>
             `
 
             document.querySelectorAll('.soyle').forEach((soyle, i) => {
-                soyle.style.width = "20%"
+                soyle.style.width = `${blokk[i]}%`
             })
         }
 
