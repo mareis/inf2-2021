@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <div class="container-sm">
+        <br>
+        <h1>Valg </h1>
+        <br>
+        <div id="innlogging">
+            <div id="form">
+                <input id="passord" type="password">
+                <input id="knapp" type="button" value="Gå videre">
+            </div>
+            <br>
+            <div id="tilbakemelding"></div>
+        </div>
+        <div id="registrering">
+            <div id="form2">
+                <div id="radio">
+
+                </div>
+                <input type="submit" value="">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let passordene = [
+            "Passord001",
+            "Passord002",
+            "Passord003",
+            "Passord004",
+            "Passord005",
+            "Passord006",
+            "Passord007",
+            "Passord008",
+            "Passord009",
+            "Passord010"
+        ]
+
+        let gyldigPassord = false;
+        document.querySelector('#knapp').addEventListener('click', e => {
+            const inntastetPassord = document.querySelector('#passord').value;
+            console.log(inntastetPassord);
+            passordene.forEach((passord, i) => {
+                if (passord == inntastetPassord) {
+                    gyldigPassord = true;
+                    passordene.splice(i, 1)
+                    console.log(passordene)
+                    document.querySelector('#tilbakemelding').innerHTML = `
+                    <div class="alert alert-success" role="alert">
+                        Passordet er korekt, du sendes videre.
+                    </div>
+
+                `;
+                }
+            })
+            if (!gyldigPassord) {
+                //Skriv ut feilmelding
+                document.querySelector('#tilbakemelding').innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    Passordet er ugyldig!
+                </div>
+                `;
+            }
+        })
+
+    </script>
+</body>
+
+</html>
