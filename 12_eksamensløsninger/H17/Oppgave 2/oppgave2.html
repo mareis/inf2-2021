@@ -94,7 +94,7 @@
                 blokk: 0
             }
         ]
-        let blokk_0, blokk_1, blokk_2;
+        let blokk;
         const inputE = document.querySelector("#input");
         partier.forEach(parti => {
             inputE.innerHTML += `
@@ -118,34 +118,32 @@
 
 
         function skrivUtResultat() {
-            block_0 = 0;
-            blokk_1 = 0;
-            blokk_2 = 0;
+            blokk = [0, 0, 0]
 
             partier.forEach(parti => {
                 if (parti.blokk === 1) {
-                    blokk_1 += parti.prosent;
+                    blokk[1] += parti.prosent;
                 }
                 else if (parti.blokk === 2) {
-                    blokk_2 += parti.prosent;
+                    blokk[2] += parti.prosent;
                 }
                 else if (parti.blokk === 0) {
-                    blokk_0 += parti.prosent;
+                    blokk[0] += parti.prosent;
                 }
             })
 
             const utskriftE = document.querySelector("#utskrift");
-            if (blokk_1 > blokk_2) {
+            if (blokk[1] > blokk[2]) {
                 utskriftE.innerHTML = `            
                 <div class="alert alert-success" role="alert">
-                    Rødgrønn blokk vant skolevalget med ${blokk_1 - blokk_2} prosentpoeng.
+                    Rødgrønn blokk vant skolevalget med ${blokk[1] - blokk[2]} prosentpoeng.
                 </div>
                 `;
             }
-            else if (blokk_2 > blokk_1) {
+            else if (blokk[2] > blokk[1]) {
                 utskriftE.innerHTML = `            
                 <div class="alert alert-success" role="alert">
-                    Borgerlig blokk vant skolevalget med ${blokk_2 - blokk_1} prosentpoeng.
+                    Borgerlig blokk vant skolevalget med ${blokk[2] - blokk[1]} prosentpoeng.
                 </div>
                 `;
             }
@@ -161,11 +159,16 @@
         function skrivUtDiagram() {
             const diagramE = document.querySelector("#diagram");
             diagramE.innerHTML = `
-                <div class="soyle" style='width:"${blokk_1}%"'>Rødgrønn blokk</div>
-                <div class="soyle" style='width:"${blokk_2}%"'>Borgerlig blokk</div>
-                <div class="soyle" style='width:"${blokk_0}%"'>Ingen blokk</div>
+                <div class="soyle">Ingen blokk</div>
+                <div class="soyle">Rødgrønn blokk</div>
+                <div class="soyle">Borgerlig blokk</div>
             `
+
+            document.querySelectorAll('.soyle').forEach((soyle, i) => {
+                soyle.style.width = "20%"
+            })
         }
+
     </script>
 
 
