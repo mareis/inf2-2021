@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+        .soyle {
+            height: 20px;
+            margin-bottom: 5px;
+            background-color: darkgreen;
+            color: white;
+            text-align: right;
+            display: block;
+            width: 50%;
+
+        }
+    </style>
     <title>Oppgave 2</title>
 </head>
 
@@ -81,7 +94,7 @@
                 blokk: 0
             }
         ]
-        let block_0, blokk_1, blokk_2;
+        let blokk_0, blokk_1, blokk_2;
         const inputE = document.querySelector("#input");
         partier.forEach(parti => {
             inputE.innerHTML += `
@@ -145,14 +158,16 @@
             }
         }
 
-        function diagram() {
-
+        function skrivUtDiagram() {
+            const diagramE = document.querySelector("#diagram");
+            diagramE.innerHTML = `
+                <div class="soyle" style='width:"${blokk_1}%"'>Rødgrønn blokk</div>
+                <div class="soyle" style='width:"${blokk_2}%"'>Borgerlig blokk</div>
+                <div class="soyle" style='width:"${blokk_0}%"'>Ingen blokk</div>
+            `
         }
-
-
-
-
     </script>
+
 
 </body>
 
